@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+
+<div class="tela-entrar"> 
+    <img src="./imgs/logo 2.png" alt="logo da uol">
+    <input type="text" name="input" placeholder="Digite seu nome" class="escolha-nome">
+    <button class="botao-entrar" onclick="entrarNaSala()"> Entrar</button>
+</div>
+<div class="conteudo-pagina">
+    <header class="menu-topo">
+        <img src="./imgs/logo 1.png" alt="logo da uol">
+        <ion-icon name="people" onclick="mostrarSidebar()"></ion-icon>
+    </header>
+
+    <ul class = "container-mensagens"> 
+
+
+    </ul>
+
+    <div class="enviar-mensagem">
+       <div> 
+        <input type="text" name="input" placeholder="Escreva aqui..." class="envio-mensagem" >
+        <p> Enviando mensagem para Todos</p>
+        </div>
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+    </div>
+
+<div class="tela-menu-contato" onclick="ocultarSidebar()"> </div>
+    <aside class="menu-contato">
+
+        <div class = "titulo">Escolha um contato para enviar mensagem: </div>
+
+        <div class = "contatos">
+            <div class = "contato contato-escolhido" onclick="escolherDestinatario(this)"> 
+                <div><ion-icon name="people"  class = "contato-icone"></ion-icon> 
+                <p class = "contato-nome">Todos </p> </div>
+                <ion-icon name="checkmark-sharp" class = "check"></ion-icon>
+            </div>
+        </div>
+
+        <div class = "titulo">Escolha a visibilidade: </div>
+
+        <div class = "visibilidade">
+            <div class = "publico visibilidade-escolhida" onclick="escolherVisibilidade(this)"> 
+                <div><ion-icon name="lock-open-sharp"  class = "visibilidade-icone"></ion-icon> 
+                <p class = "visibilidade-nome">Público</p> </div>
+                <ion-icon name="checkmark-sharp" class = "check"></ion-icon>
+            </div>
+
+            <div class = "reservado" onclick="escolherVisibilidade(this)"> 
+                <div><ion-icon name="lock-closed-sharp" class = "visibilidade-icone"></ion-icon>
+                 <p class = "visibilidade-nome">Reservadamente</p> </div>
+                 <ion-icon name="checkmark-sharp" class = "escondido"></ion-icon> 
+            </div>
+        </div>
+
+     </aside>
+
+</div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
