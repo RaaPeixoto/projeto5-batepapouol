@@ -223,6 +223,7 @@ button{
     top: 0px;
     background: #FFFFFF;
     display: none ;
+    overflow-y: scroll;
 }
 
 .menu-contato .titulo{
