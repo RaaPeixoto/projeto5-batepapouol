@@ -28,7 +28,7 @@
 
     <div class="enviar-mensagem">
        <div> 
-        <input type="text" name="input" placeholder="Escreva aqui..." class="envio-mensagem" >
+        <input type="text" name="input" placeholder="Escreva aqui..." class="envio-mensagem" onkeydown="enviarNoEnter(event)">
         <p> Enviando mensagem para Todos</p>
         </div>
         <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>

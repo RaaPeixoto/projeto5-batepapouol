@@ -1,11 +1,8 @@
  @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
 body {
     margin:  0 auto;
-    
 }
-div {
-    box-sizing: border-box;
-}
+
 
 button{
     border: inherit;
@@ -60,7 +57,7 @@ button{
 .conteudo-pagina {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
     height: 100%;
     display: none;
 }
@@ -89,42 +86,46 @@ button{
 }
 
 .container-mensagens{
-
+    
    margin: 80px 0;
    padding-top: 26px;
    background: #F3F3F3;
    width: 100%;
     height: 100%;
+    word-wrap: break-word;
 }
 
 .mensagem-entrar-sair{
-    
+    width: 100%;
     padding: 10px 8px;
     align-items: center;
     display: flex;
     background: #DCDCDC;
     border-radius: 2px;
     margin-bottom: 4px;
+    box-sizing: border-box;
 }
 
 .mensagem-publica{
-    
+    width: 100%;
     padding: 10px 8px;
     align-items: center;
     display: flex;
     background: #FFFFFF;
     border-radius: 2px;
     margin-bottom: 4px;
+    box-sizing: border-box;
 }
 
 .mensagem-privada{
-    
+    width: 100%;
     padding: 10px 8px;
     align-items: center;    
     display: flex;
     background: #FFDEDE;
     border-radius: 2px;
-    margin-bottom: 4px;
+    margin-bottom: 4px;  
+    box-sizing: border-box;
 }
 
 .hora{
@@ -133,6 +134,7 @@ button{
 }
 
 .mensagem{
+    width: 100%;
     font-family: 'Roboto',sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -161,6 +163,7 @@ button{
     width: 100vw;
     background: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
   
 }
 .enviar-mensagem div{
@@ -192,6 +195,7 @@ button{
 }
 .enviar-mensagem ion-icon{
     font-size: 26px;
+    margin-right: 20px;
 }
 
 .tela-menu-contato{

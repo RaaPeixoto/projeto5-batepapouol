@@ -111,7 +111,6 @@ setInterval (pegarDadosMensagens, 3000);
 
 function scrollUltima(){
 const ultimaMensagem = document.querySelector('.container-mensagens >:last-child ');
-console.log(ultimaMensagem)
 ultimaMensagem.scrollIntoView();
 }
 
@@ -171,14 +170,14 @@ function escolherDestinatario(contatoClicado){
     contatoEscolhido = document.querySelector(".contato-escolhido");
     if ( contatoEscolhido!== null){
         const checkAtivo= contatoEscolhido.querySelector(".check");
-        console.log(checkAtivo);
+        
         contatoEscolhido.classList.remove("contato-escolhido");
         checkAtivo.classList.add ("escondido")
         checkAtivo.classList.remove("check")
     }
     
     contatoClicado.classList.add ('contato-escolhido')
-    console.log(contatoClicado)
+    
     const check = contatoClicado.querySelector(".escondido")
     check.classList.remove ("escondido")
     check.classList.add("check")
@@ -193,14 +192,14 @@ function escolherVisibilidade (visibilidadeEscolhida){
     const escolhido = document.querySelector(".visibilidade-escolhida")
     if ( escolhido !== null){
         const checkAtivo= escolhido.querySelector(".check")
-        console.log(checkAtivo);
+    
         escolhido.classList.remove("visibilidade-escolhida");
         checkAtivo.classList.add ("escondido")
         checkAtivo.classList.remove("check")
     }
     
     visibilidadeEscolhida.classList.add ('visibilidade-escolhida')
-    console.log(visibilidadeEscolhida)
+   
     const check = visibilidadeEscolhida.querySelector(".escondido")
     check.classList.remove ("escondido")
     check.classList.add("check")
@@ -211,9 +210,9 @@ function escolherVisibilidade (visibilidadeEscolhida){
 function layoutEnvio() {
     contatoEscolhido = document.querySelector(".contato-escolhido");
     const contatoNome = contatoEscolhido.querySelector("p").innerHTML;
-    console.log(contatoNome)
+   
    const visibilidade = document.querySelector(".visibilidade-escolhida p")
-    console.log(contatoNome);
+   
     const mensagem = document.querySelector (".enviar-mensagem p")
 
 
@@ -282,6 +281,12 @@ if (tipoVisibilidade.innerHTML === "Reservadamente" && nomeDestinatario.innerHTM
     
 }
 
+function enviarNoEnter(event){
+    let tecla = event.key;
+    if (tecla ==="Enter"){
+        enviarMensagem();
+    }
+}
 function mensagemNaoEnviada (erro){
     console.log(erro);
     alert ("A mensagem não pode ser enviada, tente novamente.")
