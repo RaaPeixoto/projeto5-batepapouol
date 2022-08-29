@@ -289,5 +289,7 @@ function enviarNoEnter(event){
 }
 function mensagemNaoEnviada (erro){
     console.log(erro);
-    alert ("A mensagem não pode ser enviada, tente novamente.")
+    alert ("Ocorreu um erro e mensagem não pode ser enviada ")
+    window.location.reload();
+
 }
