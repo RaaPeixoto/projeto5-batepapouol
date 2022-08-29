@@ -14,7 +14,7 @@ button{
 
 }
 
-.tela-entrar img {
+.tela-entrar img:first-child {
     width: 130px;
     margin-top: 72px;
 }
@@ -52,6 +52,11 @@ button{
     justify-content: center;
     align-items: center;
     color: #696969;
+    }
+
+    .loading{
+        margin-top: 94px;
+        width: 90px;
     }
 
 .entrando {
