@@ -12,6 +12,14 @@ let nomeDestinatario = document.querySelector(".contato-escolhido p");
 
 //promessa para entrar na sala
 function entrarNaSala () {
+    let loading = document.querySelector(".loading");
+    loading.classList.remove ("escondido")
+    let entrando = document.querySelector(".entrando");
+    entrando.classList.remove ("escondido")
+    let inputLogin = document.querySelector(".escolha-nome");
+    inputLogin.classList.add ("escondido")
+    let botaoEntrar = document.querySelector(".botao-entrar");
+    botaoEntrar.classList.add ("escondido")
     const novoContato = {
         name:elementoNome.value
     }; 
@@ -23,7 +31,8 @@ function entrarNaSala () {
 
 function contatoNaoRecebido (erro) {
     console.log(erro);
- alert ("Não foi possível conectar a sala! Por favor utilize outro nome de usuário.")
+ alert ("Não foi possível conectar a sala! Por favor utilize outro nome de usuário.");
+ window.location.reload();
 }
 //entrada com sucesso
 function entradaDisponivel (){
