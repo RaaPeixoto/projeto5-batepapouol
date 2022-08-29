@@ -10,6 +10,12 @@ const elementoNome= document.querySelector('.escolha-nome');
 let nomeUsuario;
 let nomeDestinatario = document.querySelector(".contato-escolhido p");
 
+function entrarNoEnter(event){
+    let tecla = event.key;
+    if (tecla ==="Enter"){
+        entrarNaSala();
+    }
+}
 //promessa para entrar na sala
 function entrarNaSala () {
     let loading = document.querySelector(".loading");
